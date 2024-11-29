@@ -133,7 +133,7 @@ This project is licensed under the MIT License.
 
 ## Extra: Full-Option Context Menu
 
-If you prefer the context menu to display all options directly without needing to click **"Show more options"**, this is a guide to follow:  
+If you prefer the context menu to display all options directly without needing to click **"Show more options"**, this is a good guide to follow:  
 **Recommended:** Use the Registry Editor method (the first method described in the video).  
 
 [Watch the tutorial here](https://www.youtube.com/watch?v=klVbfbTOVP8&t)
