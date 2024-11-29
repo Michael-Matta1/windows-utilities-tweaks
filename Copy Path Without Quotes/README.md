@@ -45,7 +45,7 @@ While working with file paths, I found it frustrating to delete the quotes every
      ```
      wscript.exe "C:\Path\To\Script\CopyPathWithoutQuotes.vbs" "%1"
      ```
-"You can use the .bat file but it will open cmd and we don't want that"
+     `Note: You can use the .bat file but it will open cmd and we don't want that`
 
      Replace `C:\Path\To\Script\` with the actual path where you placed the `CopyPathWithoutQuotes.vbs` file. For example:
      ```
