@@ -1,5 +1,16 @@
 # Copy Path Without Quotes for Windows 11
-
+- [Why I Made This](#why-i-made-this)  
+- [Features](#features)  
+- [Installation](#installation)  
+  - [Prerequisites](#prerequisites)  
+  - [Steps](#steps)  
+  - [Optional: Change Context Menu Position](#optional-change-context-menu-position)  
+- [Usage](#usage)  
+- [Troubleshooting](#troubleshooting)  
+- [Contributing](#contributing)  
+- [License](#license)  
+- [Extra: Full-Option Context Menu](#extra-full-option-context-menu)  
+---
 This project adds a new context menu option, **"Copy Path Without Quotes"**, to Windows 11. It is a convenient addition to the existing **"Copy as path"** option, which copies file or folder paths enclosed in quotes. This new feature directly copies paths without quotes, saving time in scenarios where quoted paths are not needed.
 
 ## Why I Made This
@@ -118,3 +129,11 @@ Feel free to fork the repository and submit pull requests with improvements or b
 
 This project is licensed under the MIT License.
 
+---
+
+## Extra: Full-Option Context Menu
+
+If you prefer the context menu to display all options directly without needing to click **"Show more options"**, this is a guide to follow:  
+**Recommended:** Use the Registry Editor method (the first method described in the video).  
+
+[Watch the tutorial here](https://www.youtube.com/watch?v=klVbfbTOVP8&t)
