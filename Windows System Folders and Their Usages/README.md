@@ -1,6 +1,7 @@
 # Windows System Folders and Their Usages
 
 This repository contains information about various Windows system folders and their possible usages. These folders can be accessed through one of the following:
+
 1. **Using the Run Dialog:**
    - Press `Windows + R` on your keyboard.
    - Type `shell:<folder_name>` (e.g., `shell:startup`).
@@ -15,7 +16,13 @@ This repository contains information about various Windows system folders and th
    - Open Command Prompt (`cmd`) or PowerShell.
    - Type `explorer shell:<folder_name>` and press `Enter`.
 
-Would you like me to add this explanation to your README? 🚀
+## 📌 Navigation
+- [📂 All Installed Applications](#-all-installed-applications)
+- [🚀 Applications That Automatically Run at Startup](#-applications-that-automatically-run-at-startup)
+- [📜 Start Menu Applications](#-start-menu-applications)
+- [✉️ "Send To" Right-Click Menu Options](#-send-to-right-click-menu-options)
+- [📌 Taskbar Pinned Applications](#-taskbar-pinned-applications)
+- [🛠️ Enable "GodMode"](#-enable-godmode)
 
 ## 📂 All Installed Applications
 
@@ -79,6 +86,4 @@ Would you like me to add this explanation to your README? 🚀
 
 - Some folders require administrator privileges to access or modify.
 - Custom paths may vary based on Windows versions and user configurations.
-
-
 
