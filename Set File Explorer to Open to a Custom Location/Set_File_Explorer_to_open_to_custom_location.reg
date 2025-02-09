@@ -1,0 +1,8 @@
+Windows Registry Editor Version 5.00
+
+; You may be interested in:  https://github.com/Michael-Matta1/Edit_Windows_Features/tree/main
+; This method is by: Shawn Brink
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\CLSID\{52205fd8-5dfb-447d-801a-d0b52f2e83e1}\shell\OpenNewWindow\command]
+@="Explorer \"C:\\Windows\""
+"DelegateExecute"=""
