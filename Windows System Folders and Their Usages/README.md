@@ -1,6 +1,21 @@
 # Windows System Folders and Their Usages
 
-This repository contains information about various Windows system folders and their possible usages. These folders can be accessed using the `shell:` command or by navigating directly in File Explorer, or through the Run dialog (`Windows + R`).
+This repository contains information about various Windows system folders and their possible usages. These folders can be accessed through one of the following:
+1. **Using the Run Dialog:**
+   - Press `Windows + R` on your keyboard.
+   - Type `shell:<folder_name>` (e.g., `shell:startup`).
+   - Press `Enter`, and the folder will open.
+
+2. **Using File Explorer:**
+   - Open File Explorer (`Windows + E`).
+   - In the address bar, type `shell:<folder_name>` (e.g., `shell:AppsFolder`).
+   - Press `Enter` to open the folder.
+
+3. **Using Command Prompt or PowerShell:**
+   - Open Command Prompt (`cmd`) or PowerShell.
+   - Type `explorer shell:<folder_name>` and press `Enter`.
+
+Would you like me to add this explanation to your README? 🚀
 
 ## 📂 All Installed Applications
 
