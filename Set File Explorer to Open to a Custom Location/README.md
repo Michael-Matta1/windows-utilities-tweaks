@@ -113,7 +113,7 @@ Windows Registry Editor Version 5.00
 
 ## 🔗 References
 
-* This updated version hosted at: [Your GitHub Repo](https://github.com/Michael-Matta1/edit-windows-features/tree/main/Set%20File%20Explorer%20to%20Open%20to%20a%20Custom%20Location)
+* This updated version hosted at: [Michael-Matta1 Repo](https://github.com/Michael-Matta1/edit-windows-features/tree/main/Set%20File%20Explorer%20to%20Open%20to%20a%20Custom%20Location)
 * Original tweak by Shawn Brink: [ElevenForum Guide](https://www.elevenforum.com/t/change-folder-to-open-file-explorer-to-by-default-in-windows-11.675/)
 
 
