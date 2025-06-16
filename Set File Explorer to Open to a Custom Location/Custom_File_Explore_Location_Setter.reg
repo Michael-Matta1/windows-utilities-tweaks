@@ -1,0 +1,19 @@
+Windows Registry Editor Version 5.00
+
+; Based on Shawn Brink’s original tweak — but recent Windows 11 updates broke the icon launch.
+; The original tweak only applied to Win+E (OpenNewWindow).
+; My edit adds the missing “open” verb so double-clicking the File Explorer icon works too.
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\CLSID\{52205fd8-5dfb-447d-801a-d0b52f2e83e1}\shell\OpenNewWindow\command]
+@="Explorer \"C:\\Windows\""
+"DelegateExecute"=""
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\CLSID\{52205fd8-5dfb-447d-801a-d0b52f2e83e1}\shell\open\command]
+@="Explorer \"C:\\Windows\""
+"DelegateExecute"=""
+
+; Original source of this file: https://github.com/Michael-Matta1/edit-windows-features/tree/main/Set%20File%20Explorer%20to%20Open%20to%20a%20Custom%20Location
+
+; Original source of Win+E tweak: https://www.elevenforum.com/t/change-folder-to-open-file-explorer-to-by-default-in-windows-11.675/page-2#posts
+
+; Date: Monday, June 16, 2025
