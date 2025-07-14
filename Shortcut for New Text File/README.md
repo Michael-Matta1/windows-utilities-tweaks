@@ -33,7 +33,7 @@ This repository contains several versions of the script to suit different needs:
 - A workaround to combine both options in one dialog
 
 
-### **Multi-Extension CreateTextFile.vbs** (Final Version – Most Powerful)
+### Multi-Extension CreateTextFile.vbs (Final Version – Most Powerful)
 - Supports multiple custom file extensions (e.g., `.md`, `.js`, `.py`)  
 - [Jump to full details ⬇️](#multi-extension-createtextfilevbs-final-version--most-powerful)
 ---
@@ -110,7 +110,6 @@ A new text file will appear in the current folder.
 ---
 
 ## 🆕 Multi-Extension CreateTextFile.vbs (Final Version – Most Powerful)
-<a id="multi-extension-createtextfilevbs-final-version--most-powerful"></a>
 
 - **Custom file extensions**: `.md`, `.js`, `.py`, `.html`, `.css`, `.json`, etc.
 - **Smart extension detection**  
