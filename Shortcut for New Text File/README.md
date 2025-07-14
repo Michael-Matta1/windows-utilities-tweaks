@@ -110,8 +110,7 @@ A new text file will appear in the current folder.
 
 ---
 
-### Multi-Extension CreateTextFile.vbs (Final Version – Most Powerful)
-
+### Multi-Extension CreateTextFile.vbs (Final Version - Most Powerful)
 
 - **Custom file extensions**: `.md`, `.js`, `.py`, `.html`, `.css`, `.json`, etc.
 - **Smart extension detection**  
