@@ -32,6 +32,10 @@ This repository contains several versions of the script to suit different needs:
 - The name of the created file won't have space at the end.
 - A workaround to combine both options in one dialog
 
+
+### **Multi-Extension CreateTextFile.vbs** (Final Version – Most Powerful)
+- Supports multiple custom file extensions (e.g., `.md`, `.js`, `.py`)  
+- [Jump to full details ⬇️](#multi-extension-createtextfilevbs-final-version--most-powerful)
 ---
 
 ## Features
@@ -102,3 +106,31 @@ A new text file will appear in the current folder.
 * The hotkey can be changed in the shortcut properties
 * Scripts work with any Windows version that supports VBScript
 
+
+---
+
+## 🆕 Multi-Extension CreateTextFile.vbs (Final Version – Most Powerful)
+<a id="multi-extension-createtextfilevbs-final-version--most-powerful"></a>
+
+- **Custom file extensions**: `.md`, `.js`, `.py`, `.html`, `.css`, `.json`, etc.
+- **Smart extension detection**  
+  - `filename` → `filename.txt`  
+  - `filename.md` → `filename.md`  
+  - `filename.md ` → `filename.md` and opens it
+- **Improved duplicate handling**: `filename(1).md`, `filename(2).md`, ...
+- Updated dialog titled **"Create New File"**
+
+### 📋 Examples
+| Input | Result | Opens? |
+|-------|--------|--------|
+| `test` | `test.txt` | No |
+| `test ` | `test.txt` | Yes |
+| `notes.md` | `notes.md` | No |
+| `notes.md ` | `notes.md` | Yes |
+| `script.js ` | `script.js` | Yes |
+
+### ✅ Key Features Preserved
+- **Space functionality** – Add a space to auto‑open
+- **Duplicate handling** – Numbered duplicates
+- **Error handling** – Same validations
+- **Dialogs** – Same user experience with clearer wording
