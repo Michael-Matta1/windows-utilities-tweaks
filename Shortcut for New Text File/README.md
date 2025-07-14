@@ -35,8 +35,7 @@ This repository contains several versions of the script to suit different needs:
 
 ### Multi-Extension CreateTextFile.vbs (Final Version – Most Powerful)
 - Supports multiple custom file extensions (e.g., `.md`, `.js`, `.py`)  
-- [Jump to full details ⬇️](#multi-extension-createtextfilevbs-final-version--most-powerful)
-
+[Jump to full details ⬇️](#multi-extension-createtextfilevbs-final-version---most-powerful)
 ---
 
 ## Features
