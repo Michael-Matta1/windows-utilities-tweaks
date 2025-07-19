@@ -16,3 +16,5 @@ If Not folder Is Nothing Then
     fso.CreateTextFile path & "\" & filename, True
     On Error GoTo 0
 End If
+
+' Source : https://github.com/Michael-Matta1
