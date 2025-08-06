@@ -1,0 +1,20 @@
+Windows Registry Editor Version 5.00
+
+; ================================================
+; Disable Classic Context Menu for Windows 11
+; ================================================
+; This registry file restores the Windows 11 modern context menu
+; 
+; USAGE:
+; 1. Right-click this file and select "Merge"
+; 2. Click "Yes" to confirm
+; 3. Restart Windows Explorer: Press Ctrl+Shift+Esc → Find "Windows Explorer" → Right-click → Restart
+; 4. Right-click on any file/folder to see the modern Windows 11 context menu
+;
+; WARNING: Always backup your registry before making changes!
+; Create a System Restore Point before proceeding.
+;
+; To revert: Use the enable_classic_context_menu.reg file
+; ================================================
+
+[-HKEY_CURRENT_USER\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}]
