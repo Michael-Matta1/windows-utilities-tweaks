@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\SystemFileAssociations\.py\shell\runwithpython]
+@="Run with Python"
+
+[HKEY_CLASSES_ROOT\SystemFileAssociations\.py\shell\runwithpython\command]
+@="cmd.exe /k \"py.exe \"%1\"\""
