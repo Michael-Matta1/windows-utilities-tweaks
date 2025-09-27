@@ -1,0 +1,8 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\CreateMarkdownFile]
+@="Create Markdown File"
+"Position"="Top"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\CreateMarkdownFile\command]
+@="wscript.exe \"C:\\Windows\\System32\\CreateMarkdownSilent.vbs\" \"%V\""
