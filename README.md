@@ -16,6 +16,7 @@ A comprehensive collection of Windows registry tweaks, scripts, and utilities to
     -   [Command Line Enhancements](#command-line-enhancements)
     -   [System Shortcuts & Navigation](#system-shortcuts--navigation)
     -   [Windows Explorer Customization](#windows-explorer-customization)
+    -   [Testing & System Configuration](#testing--system-configuration)
 -   [Installation Guide](#-installation-guide)
 -   [Troubleshooting](#-troubleshooting)
 
@@ -207,6 +208,23 @@ Make File Explorer open to your preferred folder by default.
 -   Based on Shawn Brink's original tweak
 
 **Best for:** Users who work primarily in specific folders
+
+---
+
+### Testing & System Configuration
+
+#### [🧪 Testing Brand-Exclusive Software - Hardware Identity Modification](https://github.com/Michael-Matta1/windows-utilities-tweaks/tree/main/Testing%20Brand-Exclusive%20Software%20-%20Hardware%20Identity%20Modification)
+
+Temporarily modify Windows registry values to test brand-exclusive software before purchasing hardware.
+
+**Features:**
+
+-   Test manufacturer-restricted software (Samsung, ASUS, Lenovo, Dell, HP, etc.)
+-   Temporary registry modifications that reset after restart
+-   Step-by-step tutorial with brand-specific examples
+-   Includes revert instructions and troubleshooting guide
+
+**Best for:** Users evaluating brand-exclusive software before making hardware purchases
 
 ---
 
