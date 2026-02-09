@@ -1,0 +1,8 @@
+Windows Registry Editor Version 5.00
+
+; Fix Right Alt + Shift language toggle bug in Windows 11
+; This remaps Right Alt to prevent AltGr interference with SecondLanguage layout
+; Requires Administrator privileges and restart
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout]
+"Scancode Map"=hex:00,00,00,00,00,00,00,00,02,00,00,00,38,00,38,e0,00,00,00,00

@@ -1,0 +1,8 @@
+Windows Registry Editor Version 5.00
+
+; Revert Right Alt + Shift fix by removing Scancode Map
+; This restores default keyboard behavior
+; Requires Administrator privileges and restart
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout]
+"Scancode Map"=-
