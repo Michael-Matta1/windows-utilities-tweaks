@@ -179,6 +179,21 @@ Convert keyboard shortcuts into clickable taskbar icons (PowerToys OCR example).
 
 ---
 
+#### [⌨️ Fix Right Alt + Shift Language Toggle](https://github.com/Michael-Matta1/windows-utilities-tweaks/tree/main/Fix%20Alt%2BShift%20LanguageToggle)
+
+A solution for the Windows 11 bug where Right Alt + Shift only switches languages in one direction.
+
+**Features:**
+
+-   Restores bidirectional language switching
+-   Registry-based fix (reversible)
+-   PowerShell script for auto-application
+-   Solves conflict with AltGr on some layouts
+
+**Best for:** Windows 11 users with multiple keyboard layouts
+
+---
+
 #### [📁 Windows Special System Folders](https://github.com/Michael-Matta1/windows-utilities-tweaks/tree/main/Windows%20Special%20System%20Folders%20and%20Their%20Usages)
 
 Quick access guide to special Windows folders using `shell:` commands.
