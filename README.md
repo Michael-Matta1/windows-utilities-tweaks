@@ -162,6 +162,20 @@ Open elevated Command Prompt directly from File Explorer's address bar.
 
 ---
 
+#### [🐚 Custom Profiles for Windows Terminal](https://github.com/Michael-Matta1/windows-utilities-tweaks/tree/main/Adding%20Custom%20Profiles%20to%20Terminal%20app)
+
+Guide for adding custom profiles (Python IDLE, Git Bash, etc.) to Windows Terminal.
+
+**Features:**
+
+- Add Python IDLE, Git Bash, PowerShell ISE
+- Custom icons and starting directories
+- Step-by-step configuration guide
+
+**Best for:** Developers using Windows Terminal
+
+---
+
 ### System Shortcuts & Navigation
 
 #### [📌 Pin Any Keyboard Shortcut to Taskbar](https://github.com/Michael-Matta1/windows-utilities-tweaks/tree/main/Pin%20Any%20Keyboard%20Shortcut%20to%20Taskbar%20-%20OCR%20Example)
