@@ -101,55 +101,65 @@ If path = "" Then
     On Error GoTo 0
 End If
 
-' ---- Step 4: File Creation Logic (Space Version Variant) ----
-
-' Ask the user for filename and open option in one dialog
-userInput = InputBox("Enter file name (without extension):" & vbCrLf & vbCrLf & _
+' ---- Step 4: File Creation Logic (Multi-Extension Variant) ----
+userInput = InputBox("Enter file name (with or without extension):" & vbCrLf & vbCrLf & _
                     "Add a space at the end if you want to open the file after creation" & vbCrLf & _
-                    "Example: MyFile ", "Create New Text File", "NewTextFile")
+                    "Examples: MyFile, test.md, script.js ", "Create New File", "NewTextFile")
 
-If userInput = "" Then
-    WScript.Quit
-End If
+If userInput = "" Then WScript.Quit
 
-' Check if user wants to open the file (trailing space)
 openFile = False
 If Right(userInput, 1) = " " Then
     openFile = True
     userInput = RTrim(userInput)
 End If
 
-' Process filename
 If Trim(userInput) = "" Then
     filename = "NewTextFile.txt"
+    fileExtension = ".txt"
 Else
-    If LCase(Right(userInput, 4)) <> ".txt" Then
-        filename = userInput & ".txt"
-    Else
+    If InStr(userInput, ".") > 0 Then
         filename = userInput
+        dotPos = InStrRev(filename, ".")
+        fileExtension = Mid(filename, dotPos)
+    Else
+        filename = userInput & ".txt"
+        fileExtension = ".txt"
     End If
 End If
 
-' Avoid overwriting existing files
+invalidChars = Array("\", "/", ":", "*", "?", """", "<", ">", "|")
+For Each char In invalidChars
+    filename = Replace(filename, char, "")
+Next
+
+If Trim(filename) = "" Or filename = fileExtension Then
+    MsgBox "Invalid filename!" & vbCrLf & vbCrLf & "Please enter a valid filename without special characters like \ / : * ? "" < > |", vbExclamation, "Error"
+    WScript.Quit
+End If
+
 i = 1
 baseName = filename
 Do While fso.FileExists(path & "\" & filename)
-    nameOnly = Left(baseName, Len(baseName) - 4)
-    filename = nameOnly & "(" & i & ").txt"
+    dotPos = InStrRev(baseName, ".")
+    If dotPos > 0 Then
+        nameOnly = Left(baseName, dotPos - 1)
+        filename = nameOnly & "(" & i & ")" & fileExtension
+    Else
+        filename = baseName & "(" & i & ")"
+    End If
     i = i + 1
 Loop
 
-' Create the file
 On Error Resume Next
 fso.CreateTextFile path & "\" & filename, True
 
 If Err.Number = 0 Then
-    ' Only open if user added /open
     If openFile Then
         wshShell.Run "notepad.exe """ & path & "\" & filename & """"
     End If
     If Not activeFolder Is Nothing Then activeFolder.Refresh
 Else
-    MsgBox "Error creating file: " & Err.Description, vbCritical, "Error"
+    MsgBox "Error creating file: " & Err.Description & vbCrLf & vbCrLf & "Path: " & path & "\" & filename, vbCritical, "Error"
 End If
 On Error GoTo 0

@@ -1,12 +1,45 @@
-# 📄 Create New Text File with `Ctrl + Alt + N` 
+# 📄 Create New Text File with `Ctrl + Alt + N`
 
-This project lets you create a new `.txt` file in the **currently open File Explorer folder** by pressing `Ctrl + Alt + N`, just like `Ctrl + Shift + N` creates a new folder.
+This guide lets you create a new `.txt` file in the **currently open File Explorer folder** by pressing `Ctrl + Alt + N` (or any other keyboard shortcut you assign), just like `Ctrl + Shift + N` creates a new folder.
 
 ---
 
 ## 📁 Files Included
 
 This repository contains several versions of the script to suit different needs:
+
+### **CreateTextFile.vbs Scripts** (Now with Windows 11 Tabs Support!)
+
+This collection contains several versions of a script to create a new text file in the currently active File Explorer folder via a keyboard shortcut (`Ctrl + Alt + N` recommended).
+
+**New Feature**: All scripts now reliably support **Windows 11 Tabs** and multiple Explorer windows using a robust PowerShell helper.
+
+### ⚠️ Important Requirement
+All `.vbs` scripts **require** `GetActiveExplorerPath.ps1` to be in the same folder.
+If you move a script, you must move the `.ps1` file with it.
+
+---
+## Features
+
+- Creates `.txt` files in the active File Explorer window
+- Automatically avoids overwriting by appending numbers: `NewTextFile(1).txt`, `NewTextFile(2).txt`, etc.
+- Uses **VBScript**, no extra software required
+- Multiple versions available for different user preferences
+- Lightweight and fast execution
+
+
+## 🧠 Notes
+
+* All versions handle duplicate filenames automatically
+* You can modify the default filename or location in any script
+* The hotkey can be changed in the shortcut properties
+* Scripts work with any Windows version that supports VBScript
+
+
+
+---
+
+### 📂 Included Versions
 
 ### **CreateTextFileNeverOpen.vbs** (Basic Version)
 - Creates `NewTextFile.txt` without any user prompts
@@ -32,58 +65,56 @@ This repository contains several versions of the script to suit different needs:
 - The name of the created file won't have space at the end.
 - A workaround to combine both options in one dialog
 
+#### **MultiExtension-CreateTextFile.vbs** (Recommended)
+- Supports custom extensions (e.g., `script.js`, `page.html`).
+- Smart handling: `name` -> `.txt`, `name.md` -> `.md`.
+- Add a space at the end to auto-open the file.
 
-### Multi-Extension CreateTextFile.vbs (Final Version – Most Powerful)
-- Supports multiple custom file extensions (e.g., `.md`, `.js`, `.py`)  
-[Jump to full details ⬇️](#multi-extension-createtextfilevbs-final-version---most-powerful)
----
-
-## Features
-
-- Creates `.txt` files in the active File Explorer window
-- Automatically avoids overwriting by appending numbers: `NewTextFile(1).txt`, `NewTextFile(2).txt`, etc.
-- Uses **VBScript**, no extra software required
-- Multiple versions available for different user preferences
-- Lightweight and fast execution
 
 ---
 
-## 🛠 How to Set Up
+### 🛠 Installation
 
-### 1. Choose Your Version
+#### Setp 1: Create the shortcut
+1.  **Download** all files in this folder (or at least the Script you want + `GetActiveExplorerPath.ps1`).
+2.  **Move** them to a permanent location (e.g., `C:\Scripts\`).
+3.  **Right-click** your chosen `.vbs` file -> **Create shortcut**.
+4.  **Right-click** the shortcut -> **Properties**.
+5.  **Shortcut key**: Press `Ctrl + Alt + N` (or your preferred key).
+6.  **Click OK**.
 
-Pick the `.vbs` file that matches your preferred workflow:
-- **Basic users**: `CreateTextFileNeverOpen.vbs`
-- **Always edit immediately**: `CreateTextFileAlwaysOpen.vbs`
-- **Want naming control**: `CreateTextFile2DialogsVersion.vbs`
-- **Power users**: `CreateTextFileSpaceVersion.vbs`
-
-### 2. Create a Shortcut
-
-1. Right-click your chosen `.vbs` file → **Create shortcut**.
-2. Rename the shortcut if desired (e.g. `New Text File Shortcut`).
-3. Right-click the shortcut → **Properties**.
-4. Go to the **Shortcut** tab.
-5. In the **Shortcut key** field, press `Ctrl + Alt + N`.
-6. Click **OK**.
-
-### 3. Move the Shortcut to a Valid Location
+### Setp 2: Move the Shortcut to a Valid Location
 
 To ensure the hotkey works, move the shortcut to:
 
 * Your **Desktop**, or
-* Your **Start Menu** folder:
+* Your **Start Menu** folder **(Recommended)**:
   * Press `Win + R`, type: `shell:Start Menu\Programs`
   * Move the shortcut into this folder.
 
----
+### Setp 3: Restart
 
-### ✅ You're Done!
+**Restart Windows Explorer process via task manager**: or restart your PC .
 
-Now, press `Ctrl + Alt + N` while a File Explorer window is open.
-A new text file will appear in the current folder.
+If the shortcut is not working:
+1.  **Right-click** on the shortcut -> **properties**
+2.  In the target field, type:
+    ```
+    wscript.exe "C:\Path\To\Your\Script.vbs"
+    ```
+    *(Replace `C:\Path\To\Your\Script.vbs` with the actual path to your chosen `.vbs` file)*
+3.  Click **OK**
 
-**Note: Restarting Windows Explorer is required (If it doesn't work, restart your PC)**
+
+### Important note:
+
+- The helper runs via `powershell -ExecutionPolicy Bypass`, so it should work on most systems.
+
+- if it fails to work in your system run these two commands in PowerShell as Administrator:
+```powershell
+Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope LocalMachine
+```
 
 ---
 
@@ -99,22 +130,14 @@ A new text file will appear in the current folder.
 
 ---
 
-## 🧠 Notes
 
-* All versions handle duplicate filenames automatically
-* You can modify the default filename or location in any script
-* The hotkey can be changed in the shortcut properties
-* Scripts work with any Windows version that supports VBScript
-
-
----
 
 ### Multi-Extension CreateTextFile.vbs (Final Version - Most Powerful)
 
 - **Custom file extensions**: `.md`, `.js`, `.py`, `.html`, `.css`, `.json`, etc.
-- **Smart extension detection**  
-  - `filename` → `filename.txt`  
-  - `filename.md` → `filename.md`  
+- **Smart extension detection**
+  - `filename` → `filename.txt`
+  - `filename.md` → `filename.md`
   - `filename.md ` → `filename.md` and opens it
 - **Improved duplicate handling**: `filename(1).md`, `filename(2).md`, ...
 - Updated dialog titled **"Create New File"**
