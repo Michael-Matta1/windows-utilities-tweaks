@@ -1,5 +1,7 @@
 Windows Registry Editor Version 5.00
 
+; source of this file is https://github.com/Michael-Matta1/windows-utilities-tweaks (c) Michael-Matta1
+
 [HKEY_CLASSES_ROOT\SystemFileAssociations\.py\shell\runwithpython]
 @="Run with Python"
 

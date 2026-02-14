@@ -1,3 +1,4 @@
+# source of this file is https://github.com/Michael-Matta1/windows-utilities-tweaks (c) Michael-Matta1
 # PowerShell script to activate Win+Shift+T - Silent version
 # This script properly holds Windows and Shift keys while pressing T with no output
 

@@ -1,3 +1,4 @@
+' source of this file is https://github.com/Michael-Matta1/windows-utilities-tweaks (c) Michael-Matta1
 ' CreateMarkdownSilent.vbs
 ' Silent markdown file creation script
 ' Usage: wscript.exe CreateMarkdownSilent.vbs "C:\target\directory"

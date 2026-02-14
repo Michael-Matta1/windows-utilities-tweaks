@@ -1,3 +1,4 @@
+# source of this file is https://github.com/Michael-Matta1/windows-utilities-tweaks (c) Michael-Matta1
 # Fix Right Alt + Shift Language Toggle Bug in Windows 11
 # This script fixes the specific bug where Right Alt is treated as AltGr
 # Requires Administrator privileges

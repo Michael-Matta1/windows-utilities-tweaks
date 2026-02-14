@@ -1,3 +1,4 @@
+' source of this file is https://github.com/Michael-Matta1/windows-utilities-tweaks (c) Michael-Matta1
 Set objShell = CreateObject("WScript.Shell")
 Set objFSO = CreateObject("Scripting.FileSystemObject")
 

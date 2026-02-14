@@ -1,4 +1,4 @@
-' Source: https://github.com/Michael-Matta1/windows-utilities-tweaks
+' source of this file is https://github.com/Michael-Matta1/windows-utilities-tweaks (c) Michael-Matta1
 
 Set shell = CreateObject("Shell.Application")
 Set fso = CreateObject("Scripting.FileSystemObject")

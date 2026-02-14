@@ -1,5 +1,7 @@
 Windows Registry Editor Version 5.00
 
+; source of this file is https://github.com/Michael-Matta1/windows-utilities-tweaks (c) Michael-Matta1
+
 ; Fix Right Alt + Shift language toggle bug in Windows 11
 ; This remaps Right Alt to prevent AltGr interference with SecondLanguage layout
 ; Requires Administrator privileges and restart

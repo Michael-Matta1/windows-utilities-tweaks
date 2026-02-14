@@ -1,3 +1,4 @@
+# source of this file is https://github.com/Michael-Matta1/windows-utilities-tweaks (c) Michael-Matta1
 # Source: https://github.com/Michael-Matta1/windows-utilities-tweaks
 # Silent helper: detects the active File Explorer tab's folder path
 # Called by CreateTextFile.vbs — runs completely hidden

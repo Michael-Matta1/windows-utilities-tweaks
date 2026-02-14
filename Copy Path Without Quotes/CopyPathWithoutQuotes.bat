@@ -1,4 +1,5 @@
 @echo off
+REM source of this file is https://github.com/Michael-Matta1/windows-utilities-tweaks (c) Michael-Matta1
 setlocal enabledelayedexpansion
 
 set "paths="

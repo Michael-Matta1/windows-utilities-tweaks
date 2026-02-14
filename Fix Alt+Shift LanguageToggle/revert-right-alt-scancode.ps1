@@ -1,3 +1,4 @@
+# source of this file is https://github.com/Michael-Matta1/windows-utilities-tweaks (c) Michael-Matta1
 # Revert Right Alt + Shift Fix
 # This script removes the Scancode Map and restores default behavior
 # Requires Administrator privileges
@@ -47,9 +48,11 @@ if (Test-Path $backupDir) {
         
         if ($choice -eq "Q" -or $choice -eq "q") {
             exit
-        } elseif ($choice -eq "D" -or $choice -eq "d") {
+        }
+        elseif ($choice -eq "D" -or $choice -eq "d") {
             # Will delete below
-        } else {
+        }
+        else {
             # Restore from backup
             try {
                 $selectedBackup = $backupFiles[[int]$choice]
@@ -63,7 +66,8 @@ if (Test-Path $backupDir) {
                 Write-Host "Please restart your computer for changes to take effect" -ForegroundColor Yellow
                 Read-Host "Press Enter to exit"
                 exit
-            } catch {
+            }
+            catch {
                 Write-Host "Error restoring backup: $_" -ForegroundColor Red
                 Write-Host "Will delete Scancode Map instead" -ForegroundColor Yellow
                 Start-Sleep -Seconds 2
@@ -92,13 +96,15 @@ try {
         Write-Host "IMPORTANT:" -ForegroundColor Yellow
         Write-Host "You MUST restart your computer for this to take effect!" -ForegroundColor White
         
-    } else {
+    }
+    else {
         Write-Host "ℹ Scancode Map was not set (nothing to remove)" -ForegroundColor Cyan
         Write-Host ""
         Write-Host "Your keyboard is already using Windows defaults" -ForegroundColor Green
     }
     
-} catch {
+}
+catch {
     Write-Host "✗ Error removing Scancode Map: $_" -ForegroundColor Red
 }
 
@@ -110,7 +116,8 @@ if ($restart -eq "Y" -or $restart -eq "y") {
     Write-Host "Press Ctrl+C to cancel" -ForegroundColor Yellow
     Start-Sleep -Seconds 10
     Restart-Computer -Force
-} else {
+}
+else {
     Write-Host ""
     Write-Host "Please restart manually when ready" -ForegroundColor Yellow
     Read-Host "Press Enter to exit"

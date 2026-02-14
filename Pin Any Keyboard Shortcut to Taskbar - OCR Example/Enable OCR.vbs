@@ -1,3 +1,4 @@
+' source of this file is https://github.com/Michael-Matta1/windows-utilities-tweaks (c) Michael-Matta1
 ' VBScript to silently run PowerShell Windows + Shift + T script
 ' This script runs the PowerShell script completely hidden
 

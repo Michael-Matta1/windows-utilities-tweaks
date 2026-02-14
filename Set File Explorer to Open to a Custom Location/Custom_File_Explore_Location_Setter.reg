@@ -1,5 +1,7 @@
 Windows Registry Editor Version 5.00
 
+; source of this file is https://github.com/Michael-Matta1/windows-utilities-tweaks (c) Michael-Matta1
+
 ; Based on Shawn Brink’s original tweak — but recent Windows 11 updates broke the icon launch.
 ; The original tweak only applied to Win+E (OpenNewWindow).
 ; My edit adds the missing “open” verb so double-clicking the File Explorer icon works too.
