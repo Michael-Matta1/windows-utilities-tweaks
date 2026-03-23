@@ -16,6 +16,7 @@ A comprehensive collection of Windows registry tweaks, scripts, and utilities to
     -   [Command Line Enhancements](#command-line-enhancements)
     -   [System Shortcuts & Navigation](#system-shortcuts--navigation)
     -   [Windows Explorer Customization](#windows-explorer-customization)
+    -   [Privacy & Security](#privacy--security)
     -   [Testing & System Configuration](#testing--system-configuration)
 -   [Installation Guide](#-installation-guide)
 -   [Troubleshooting](#-troubleshooting)
@@ -56,7 +57,7 @@ This repository provides solutions for:
 
 #### [🆕 Create New Text File with Keyboard Shortcut](https://github.com/Michael-Matta1/windows-utilities-tweaks/tree/main/Add%20a%20Keyboard%20Shortcut%20to%20create%20New%20Text%20File)
 
-Create new text files instantly with `Ctrl + Alt + N` in any File Explorer window.
+Create new text files instantly with `Ctrl + Alt + N` (or any shortcut you choose) in any File Explorer window.
 
 **Features:**
 
@@ -237,6 +238,23 @@ Make File Explorer open to your preferred folder by default.
 -   Based on Shawn Brink's original tweak
 
 **Best for:** Users who work primarily in specific folders
+
+---
+
+### Privacy & Security
+
+#### [🛡️ Windows Privacy & Telemetry Hardening Guide](https://github.com/Michael-Matta1/windows-utilities-tweaks/tree/main/Privacy%20%26%20Telemetry%20Guide)
+
+A comprehensive guide and automation script to harden Windows privacy by disabling telemetry, data collection, and unnecessary tracking.
+
+**Features:**
+
+-   Disable telemetry and data collection via Group Policy and Registry
+-   Turn off background services that report to Microsoft
+-   Clear tracking history from File Explorer and run dialogs
+-   Includes `privacy_hardening.ps1` for automated application
+
+**Best for:** Privacy-conscious users, power users, and system administrators
 
 ---
 
