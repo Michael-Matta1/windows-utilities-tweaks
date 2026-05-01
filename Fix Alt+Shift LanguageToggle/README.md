@@ -185,12 +185,21 @@ Many international keyboard layouts (particularly European layouts) use AltGr (A
 
 ### PowerShell Script Execution Error
 
-**Error:** "Execution of scripts is disabled"
+**Error:** "Execution of scripts is disabled or error occurred"
 
 **Solution:**
+run the following 2 commands:
+
 ```powershell
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
+
+and
+
+```powershell
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+```
+
 
 ## Alternative Workarounds
 
