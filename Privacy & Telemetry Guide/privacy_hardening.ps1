@@ -18,9 +18,23 @@ Write-Host "================================================`n" -ForegroundColor
 # Helper functions
 function Set-Reg($path, $name, $value, $type = "DWord") {
     if (-not (Test-Path $path)) {
-        New-Item -Path $path -Force | Out-Null
+        try {
+            New-Item -Path $path -Force -ErrorAction Stop | Out-Null
+        }
+        catch {
+            Write-Host "  [!] Failed to create registry key $path : $_" -ForegroundColor Yellow
+        }
     }
-    Set-ItemProperty -Path $path -Name $name -Value $value -Type $type -Force
+    try {
+        Set-ItemProperty -Path $path -Name $name -Value $value -Type $type -Force -ErrorAction Stop
+    }
+    catch {
+        Write-Host "  [!] Failed to set $name under $path : $_" -ForegroundColor Yellow
+        if ($path -like "*Explorer\Advanced*") {
+            Write-Host "      Note: $name is protected on Windows 11 24H2+ (UserChoice Protection Driver)." -ForegroundColor DarkYellow
+            Write-Host "      Use Settings > Personalization > Taskbar instead, or Group Policy (Windows Components > Widgets / Turn off Copilot)." -ForegroundColor DarkYellow
+        }
+    }
 }
 
 function Disable-Svc($name) {
@@ -282,13 +296,29 @@ $telemetryDomains = @(
 )
 
 $hostsContent = Get-Content $hostsPath -ErrorAction SilentlyContinue
+$newBlocked = @()
 foreach ($entry in $telemetryDomains) {
     $domain = $entry.Split(" ")[1]
     if ($hostsContent -notmatch [regex]::Escape($domain)) {
-        Add-Content -Path $hostsPath -Value $entry
+        $newBlocked += $entry
         Write-Host "  [OK] Blocked: $domain" -ForegroundColor Green
     } else {
         Write-Host "  [--] Already blocked (skipping): $domain" -ForegroundColor Yellow
+    }
+}
+if ($newBlocked.Count -gt 0) {
+    $retries = 5; $delayMs = 500
+    for ($i = 0; $i -lt $retries; $i++) {
+        try {
+            Add-Content -Path $hostsPath -Value $newBlocked -ErrorAction Stop
+            break
+        } catch {
+            if ($i -eq $retries - 1) {
+                Write-Host "  [FAIL] Could not write to hosts file ($env:SystemRoot\System32\drivers\etc\hosts): $_" -ForegroundColor Red
+            } else {
+                Start-Sleep -Milliseconds $delayMs
+            }
+        }
     }
 }
 

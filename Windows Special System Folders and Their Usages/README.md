@@ -17,12 +17,12 @@ This repository contains information about various Windows system folders and th
    - Type `explorer shell:<folder_name>` and press `Enter`.
 
 ## 📌 Navigation
-- [📂 All Installed Applications](#-all-installed-applications)
-- [🚀 Applications That Automatically Run at Startup](#-applications-that-automatically-run-at-startup)
-- [📜 Start Menu Applications](#-start-menu-applications)
-- [✉️ "Send To" Right-Click Menu Options](#-send-to-right-click-menu-options)
-- [📌 Taskbar Pinned Applications](#-taskbar-pinned-applications)
-- [🛠️ Enable "GodMode"](#-enable-godmode)
+- [📂 All Installed Applications](#all-installed-applications)
+- [🚀 Applications That Automatically Run at Startup](#applications-that-automatically-run-at-startup)
+- [📜 Start Menu Applications](#start-menu-applications)
+- [✉️ "Send To" Right-Click Menu Options](#send-to-right-click-menu-options)
+- [📌 Taskbar Pinned Applications](#taskbar-pinned-applications)
+- [🛠️ Enable "GodMode"](#enable-godmode)
 
 ## 📂 All Installed Applications
 

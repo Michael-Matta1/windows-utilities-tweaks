@@ -647,6 +647,30 @@ These are additional quality-of-life and UI tweaks that are not related to priva
 
 ---
 
+### Firewall Folder Blocker (Bonus Script)
+
+A companion script `firewall folder blocker.bat` is included in this folder. It uses `netsh advfirewall` to block **all `.exe` files in the current folder (and subfolders)** from both inbound and outbound network connections.
+
+**Use case:** Drop this script into a folder containing portable apps or tools you don't want phoning home, run it as Administrator, and every `.exe` inside gets an outbound+inbound firewall rule named `Blocked: <filename>`.
+
+**How it works:**
+```bat
+for /R %%f in (*.exe) do (
+  netsh advfirewall firewall add rule name="Blocked: %%f" dir=out program="%%f" action=block
+  netsh advfirewall firewall add rule name="Blocked: %%f" dir=in program="%%f" action=block
+)
+```
+
+**To remove the rules later:**
+```powershell
+Get-NetFirewallRule -DisplayName "Blocked:*" | Remove-NetFirewallRule
+```
+
+> ⚠️ **Run as Administrator.** The script creates firewall rules which require elevation.
+> ⚠️ This blocks **all** executables in the folder tree indiscriminately — use with caution on folders containing apps you actually want online.
+
+---
+
 ## Disclaimer
 
 These changes are intended for personal privacy hardening on your own machine. Some settings — particularly disabling Delivery Optimization and Windows Error Reporting — may slightly affect Windows Update behavior or Microsoft's ability to diagnose system issues remotely. Apply only what you're comfortable with.

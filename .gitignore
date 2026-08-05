@@ -1,0 +1,47 @@
+# .NET build output
+bin/
+obj/
+**/bin/
+**/obj/
+
+# Visual Studio files
+.vs/
+*.user
+*.suo
+*.sln.docstates
+*.userprefs
+
+# Publish output
+publish/
+publish_output/
+gui/publish/
+gui/publish_test/
+*.exe
+*.pdb
+*.dll
+
+# Archives
+*.zip
+*.7z
+*.rar
+
+# IDE directories
+.vscode/
+.idea/
+
+# NuGet packages
+*.nupkg
+
+# IDE
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Log files
+**/logs/
+*.log
+
+# Temp files
+*.tmp

@@ -1,0 +1,5 @@
+bin/
+obj/
+publish/
+publish_test/
+publish_test2/

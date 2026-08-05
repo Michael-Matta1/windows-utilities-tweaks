@@ -1,0 +1,332 @@
+[
+  {
+    "id": "markdown_ctx",
+    "name": "Add Custom File Creator to Context Menu",
+    "category": "Context Menu",
+    "description": "Adds a 'Create Markdown File' option to the right-click context menu on folders and the desktop.",
+    "folder": "Add a Silent Markdown Creator to Context Menu",
+    "strategy": "CopyVbsThenReg",
+    "applyFile": "CreateMarkdown.reg",
+    "revertFile": null,
+    "canRevert": true,
+    "requiresConfirmation": false,
+    "backupTargets": [
+      { "hive": "HKCR", "path": "Directory\\Background\\shell\\CreateMarkdownFile" }
+    ],
+    "backupNote": null,
+    "variantLabel": null,
+    "variants": null
+  },
+  {
+    "id": "run_py",
+    "name": "Run .py Files with Python (Right-Click)",
+    "category": "Context Menu",
+    "description": "Adds a right-click context menu entry to run Python scripts directly. Choose between Python Launcher (auto-detect) or system PATH.",
+    "folder": "add run_with_python option to .py",
+    "strategy": "ImportReg",
+    "applyFile": null,
+    "canRevert": true,
+    "requiresConfirmation": false,
+    "backupTargets": [
+      { "hive": "HKCR", "path": "SystemFileAssociations\\.py\\shell\\runwithpython" }
+    ],
+    "backupNote": null,
+    "variantLabel": "Choose which Python runner to use:",
+    "variants": [
+      "run_with_python.reg (Python Launcher - py.exe, auto-detect version)",
+      "run_with_python_V2.reg (System PATH - python.exe)"
+    ]
+  },
+  {
+    "id": "ps1_admin_ctx",
+    "name": "Run .ps1 Files as Admin (Right-Click)",
+    "category": "Context Menu",
+    "description": "Adds a right-click context menu entry to run PowerShell scripts as Administrator.",
+    "folder": "Add Context Menu option to run .ps1 files as Admin",
+    "applyFile": null,
+    "strategy": "RegistryAPI",
+    "canRevert": true,
+    "requiresConfirmation": false,
+    "backupTargets": [
+      { "hive": "HKCR", "path": "*\\shell\\RunWithPowerShellAdmin" }
+    ],
+    "backupNote": null,
+    "variantLabel": null,
+    "variants": null
+  },
+  {
+    "id": "copy_path",
+    "name": "Copy Path Without Quotes (Right-Click)",
+    "category": "Context Menu",
+    "description": "Copies a file's full path to clipboard without surrounding quotes. Uses a VBS script placed in ProgramData.",
+    "folder": "Copy Path Without Quotes",
+    "strategy": "GenerateReg",
+    "canRevert": true,
+    "requiresConfirmation": false,
+    "backupTargets": [
+      { "hive": "HKCR", "path": "AllFilesystemObjects\\shell\\CopyPathWithoutQuotes" }
+    ],
+    "backupNote": null,
+    "variantLabel": null,
+    "variants": null
+  },
+  {
+    "id": "classic_ctx",
+    "name": "Enable Classic Context Menu (Win10 Style)",
+    "category": "Context Menu",
+    "description": "Restores the full Windows 10-style classic context menu by setting the InprocServer32 registry key, giving you all options instead of the modern Win11 flyout.",
+    "folder": "Remove or Disable Context Menu Items",
+    "strategy": "ImportReg",
+    "applyFile": "enable_classic_context_menu.reg",
+    "canRevert": true,
+    "requiresConfirmation": false,
+    "backupTargets": [
+      { "hive": "HKCU", "path": "Software\\Classes\\CLSID\\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}" }
+    ],
+    "backupNote": null,
+    "variantLabel": null,
+    "variants": null
+  },
+  {
+    "id": "fix_alt_shift",
+    "name": "Fix Alt+Shift Language Toggle",
+    "category": "Keyboard & Explorer",
+    "description": "Disables the Alt+Shift keyboard layout toggle system-wide by setting a scancode map in the registry. Requires a restart to take effect.",
+    "folder": "Fix Alt+Shift LanguageToggle",
+    "strategy": "ImportReg",
+    "applyFile": "fix-right-alt-scancode.reg",
+    "canRevert": true,
+    "requiresConfirmation": true,
+    "backupTargets": [
+      { "hive": "HKLM", "path": "SYSTEM\\CurrentControlSet\\Control\\Keyboard Layout" }
+    ],
+    "backupNote": null,
+    "variantLabel": null,
+    "variants": null
+  },
+  {
+    "id": "explorer_cmd",
+    "name": "Explorer Address Bar: acmd / aps / atr Shortcuts",
+    "category": "Keyboard & Explorer",
+    "description": "Copies batch files (acmd.bat, aps.bat, atr.bat) to C:\\Windows so you can launch Admin CMD, PowerShell, or Terminal directly from the Explorer address bar.",
+    "folder": "Explorer Address Bar Admin CMD shortcut",
+    "strategy": "GuideOnly",
+    "canRevert": true,
+    "requiresConfirmation": false,
+    "backupTargets": [],
+    "backupNote": null,
+    "variantLabel": null,
+    "variants": null
+  },
+  {
+    "id": "new_txt_file",
+    "name": "New Text File Shortcut (Ctrl+Alt+N)",
+    "category": "Keyboard & Explorer",
+    "description": "Creates a global hotkey (Ctrl+Alt+N) that creates a new text file in the active Explorer folder.",
+    "folder": "Add a Keyboard Shortcut to create New Text File",
+    "strategy": "NeedsInputVariant",
+    "canRevert": true,
+    "requiresConfirmation": false,
+    "backupTargets": [],
+    "backupNote": null,
+    "variantLabel": "Choose script behavior:",
+    "variants": [
+      "CreateTextFileNeverOpen.vbs (Basic Version)",
+      "CreateTextFileAlwaysOpen.vbs (Auto-Open Version)",
+      "CreateTextFile2DialogsVersion.vbs (Two-Dialog Version)",
+      "CreateTextFileSpaceVersion.vbs (Single Dialog Version)",
+      "MultiExtension-CreateTextFile.vbs (Recommended)"
+    ]
+  },
+  {
+    "id": "explorer_location",
+    "name": "Set File Explorer to Open Custom Location",
+    "category": "Keyboard & Explorer",
+    "description": "Makes File Explorer open to a custom folder (e.g. C:\\Windows) instead of Quick Access or This PC.",
+    "folder": "Set File Explorer to Open to a Custom Location",
+    "strategy": "NeedsInputThenReg",
+    "canRevert": true,
+    "requiresConfirmation": false,
+    "backupTargets": [
+      { "hive": "HKCU", "path": "SOFTWARE\\Classes\\CLSID\\{52205fd8-5dfb-447d-801a-d0b52f2e83e1}" }
+    ],
+    "backupNote": null,
+    "variantLabel": null,
+    "variants": null
+  },
+  {
+    "id": "privacy",
+    "name": "Privacy & Telemetry Hardening",
+    "category": "Privacy",
+    "description": "Runs a PowerShell script that hardens privacy settings and disables telemetry. The script runs in a visible console window so you can track progress.",
+    "folder": "Privacy & Telemetry Guide",
+    "strategy": "RunPS1",
+    "canRevert": false,
+    "requiresConfirmation": true,
+    "backupTargets": [],
+    "backupNote": "This script changes many settings individually — a System Restore Point is a better safety net here than a single targeted backup.",
+    "variantLabel": null,
+    "variants": null
+  },
+  {
+    "id": "firewall_folder_blocker",
+    "name": "Firewall Folder Blocker",
+    "category": "Privacy",
+    "description": "Runs a batch script that creates Windows Firewall outbound and inbound rules to block ALL .exe files in the selected folder (and subfolders) from network access. Use on folders containing portable apps/tools you don't want phoning home.",
+    "folder": "Privacy & Telemetry Guide",
+    "strategy": "RunBat",
+    "canRevert": false,
+    "requiresConfirmation": true,
+    "backupTargets": [],
+    "backupNote": "Creates firewall rules for each .exe found. Revert by running: Get-NetFirewallRule -DisplayName 'Blocked:*' | Remove-NetFirewallRule in PowerShell as Admin.",
+    "variantLabel": null,
+    "variants": null
+  },
+  {
+    "id": "terminal_profiles",
+    "name": "Adding Custom Profiles to Terminal",
+    "category": "Terminal & Shell",
+    "description": "A guide on adding custom profiles (e.g. Git Bash, WSL, etc.) to Windows Terminal.",
+    "folder": "Adding Custom Profiles to Terminal app",
+    "strategy": "GuideOnly",
+    "canRevert": true,
+    "requiresConfirmation": false,
+    "backupTargets": [],
+    "backupNote": null,
+    "variantLabel": null,
+    "variants": null
+  },
+  {
+    "id": "pin_taskbar",
+    "name": "Pin Keyboard Shortcut to Taskbar",
+    "category": "Keyboard & Explorer",
+    "description": "A guide demonstrating how to pin any keyboard shortcut to the taskbar. Includes examples for PowerToys OCR (Win+Shift+T) and Windows Voice Typing (Win+H), plus a custom keybinding shortcut generator.",
+    "folder": "Pin Any Keyboard Shortcut to Taskbar - OCR & Voice Typing",
+    "strategy": "GuideOnly",
+    "canRevert": false,
+    "requiresConfirmation": false,
+    "backupTargets": [],
+    "backupNote": null,
+    "variantLabel": null,
+    "variants": null
+  },
+  {
+    "id": "special_folders",
+    "name": "Windows Special System Folders Reference",
+    "category": "System Tools",
+    "description": "A reference guide documenting Windows special system folders (AppData, ProgramData, etc.) and their usages.",
+    "folder": "Windows Special System Folders and Their Usages",
+    "strategy": "GuideOnly",
+    "canRevert": false,
+    "requiresConfirmation": false,
+    "backupTargets": [],
+    "backupNote": null,
+    "variantLabel": null,
+    "variants": null
+  },
+  {
+    "id": "hide_context_menu_items",
+    "name": "Remove or Disable Context Menu Items",
+    "category": "Context Menu",
+    "description": "Block or restore shell extensions from the right-click context menu. Check the items to remove, then click Apply Checked.",
+    "folder": "Remove or Disable Context Menu Items",
+    "strategy": "GuideOnly",
+    "canRevert": true,
+    "requiresConfirmation": false,
+    "backupTargets": [],
+    "backupNote": null,
+    "variantLabel": null,
+    "variants": null
+  },
+  {
+    "id": "ocr_shortcut",
+    "name": "OCR Shortcut (Pin to Taskbar)",
+    "category": "Keyboard & Explorer",
+    "description": "Copies PowerToys OCR shortcut scripts and creates a shortcut pinned to the taskbar.",
+    "folder": "Pin Any Keyboard Shortcut to Taskbar - OCR & Voice Typing",
+    "strategy": "ShortcutWithManualPin",
+    "hiddenFromList": true,
+    "canRevert": true,
+    "requiresConfirmation": false,
+    "backupTargets": [],
+    "backupNote": null,
+    "variantLabel": null,
+    "variants": null
+  },
+  {
+    "id": "voice_typing_shortcut",
+    "name": "Voice Typing Shortcut (Pin to Taskbar)",
+    "category": "Keyboard & Explorer",
+    "description": "Copies Windows Voice Typing (Win+H) shortcut scripts and creates a shortcut pinned to the taskbar.",
+    "folder": "Pin Any Keyboard Shortcut to Taskbar - OCR & Voice Typing",
+    "strategy": "ShortcutWithManualPin",
+    "hiddenFromList": true,
+    "canRevert": true,
+    "requiresConfirmation": false,
+    "backupTargets": [],
+    "backupNote": null,
+    "variantLabel": null,
+    "variants": null
+  },
+  {
+    "id": "custom_shortcut",
+    "name": "Custom Keybinding Shortcut (Pin to Taskbar)",
+    "category": "Keyboard & Explorer",
+    "description": "Create a taskbar shortcut for any custom keyboard combination. Enter the keys (e.g., 'Win+H', 'Ctrl+Shift+Esc', 'Win+I') and it generates the scripts automatically.",
+    "folder": "Pin Any Keyboard Shortcut to Taskbar - OCR & Voice Typing",
+    "strategy": "ShortcutWithManualPin",
+    "hiddenFromList": true,
+    "canRevert": true,
+    "requiresConfirmation": false,
+    "backupTargets": [],
+    "backupNote": null,
+    "variantLabel": "Enter key combination (e.g., Win+H, Ctrl+Shift+Esc):",
+    "variants": null
+  },
+  {
+    "id": "terminal_ise_profile",
+    "name": "Add PowerShell ISE to Terminal",
+    "category": "Terminal & Shell",
+    "description": "Adds a PowerShell ISE profile to Windows Terminal. Always backs up Terminal settings.json before modifying.",
+    "folder": "Adding Custom Profiles to Terminal app",
+    "strategy": "TerminalProfileJson",
+    "hiddenFromList": true,
+    "canRevert": true,
+    "requiresConfirmation": false,
+    "backupTargets": [],
+    "backupNote": null,
+    "variantLabel": null,
+    "variants": null
+  },
+  {
+    "id": "terminal_gitbash_profile",
+    "name": "Add Git Bash to Terminal",
+    "category": "Terminal & Shell",
+    "description": "Adds a Git Bash profile to Windows Terminal (if Git for Windows is installed). Always backs up Terminal settings.json before modifying.",
+    "folder": "Adding Custom Profiles to Terminal app",
+    "strategy": "TerminalProfileJson",
+    "hiddenFromList": true,
+    "canRevert": true,
+    "requiresConfirmation": false,
+    "backupTargets": [],
+    "backupNote": null,
+    "variantLabel": null,
+    "variants": null
+  },
+  {
+    "id": "hw_identity",
+    "name": "Hardware Identity Test",
+    "category": "Testing & Diagnostics",
+    "description": "Modifies system manufacturer and product name in registry for testing brand-exclusive software. Backs up BIOS registry before applying.",
+    "folder": "Testing Brand-Exclusive Software - Hardware Identity Modification",
+    "strategy": "HardwareIdentityTest",
+    "canRevert": true,
+    "requiresConfirmation": true,
+    "backupTargets": [
+      { "hive": "HKLM", "path": "HARDWARE\\DESCRIPTION\\System\\BIOS" }
+    ],
+    "backupNote": "Backs up the entire HKLM\\HARDWARE\\DESCRIPTION\\System\\BIOS key. Revert restores the newest backup.",
+    "variantLabel": null,
+    "variants": null
+  }
+]

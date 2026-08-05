@@ -2,14 +2,13 @@
 
 A comprehensive collection of Windows registry tweaks, scripts, and utilities to enhance productivity and customize your Windows experience. These tools help you automate tasks, customize context menus, and streamline your workflow.
 
-> ⚠️ **Important:** Always backup your registry before making modifications. Most tweaks require administrator privileges.
-
 ---
 
 ## 📋 Table of Contents
 
 -   [Quick Start](#-quick-start)
 -   [Features Overview](#-features-overview)
+-   [Apply These Tweaks Automatically (GUI)](#-apply-these-tweaks-automatically-gui)
 -   [Available Tweaks](#-available-tweaks)
     -   [File Creation & Management](#file-creation--management)
     -   [Context Menu Customization](#context-menu-customization)
@@ -22,6 +21,20 @@ A comprehensive collection of Windows registry tweaks, scripts, and utilities to
 -   [Troubleshooting](#-troubleshooting)
 
 ---
+
+## 🚀 NEW: Apply These Tweaks Automatically (GUI)
+
+You can now apply and control these tweaks with a graphical interface — download **[Windows Tweaks Launcher](https://github.com/Michael-Matta1/windows-utilities-tweaks/releases/latest/download/WindowsTweakLauncher.exe)**, place the `.exe` in this repo's root folder (the same folder as this README), and run it. It detects the folder automatically, shows which tweaks are already applied, and can back up the affected registry keys before changing anything. It's fully self-contained. Click on a tweak from the list on the left to apply, revert it, customize it, or view its details and the launcher will handle the rest.
+
+> **Downloaded this repo as a ZIP?** Make sure `WindowsTweakLauncher.exe` ends up in the same folder as this README and the tweak folders — not nested inside a subfolder.
+
+> ⚠️ **Important:** Always backup your registry before making modifications. Most tweaks require administrator privileges so you will need to run the launcher as an administrator.
+
+[demo video](https://github.com/user-attachments/assets/0c933bf1-a8cc-44e5-a8b1-4495b610a915)
+
+
+> [!NOTE]
+> The manual guides are always more detailed and more recommended and reliable. The GUI is provided as a convenience for users who prefer an automatic one-click GUI experience who are less comfortable with the terminal and registry editing. It has been tested using a virtual machine, but not every edge case can be guaranteed. If you encounter an issue, please report it so it can be addressed.
 
 ## 🚀 Quick Start
 
@@ -179,16 +192,17 @@ Guide for adding custom profiles (Python IDLE, Git Bash, etc.) to Windows Termin
 
 ### System Shortcuts & Navigation
 
-#### [📌 Pin Any Keyboard Shortcut to Taskbar](https://github.com/Michael-Matta1/windows-utilities-tweaks/tree/main/Pin%20Any%20Keyboard%20Shortcut%20to%20Taskbar%20-%20OCR%20Example)
+#### [📌 Pin Any Keyboard Shortcut to Taskbar](https://github.com/Michael-Matta1/windows-utilities-tweaks/tree/main/Pin%20Any%20Keyboard%20Shortcut%20to%20Taskbar%20-%20OCR%20%26%20Voice%20Typing)
 
-Convert keyboard shortcuts into clickable taskbar icons (PowerToys OCR example).
+Convert keyboard shortcuts into clickable taskbar icons. Includes examples for PowerToys OCR, Windows Voice Typing, and a custom keybinding generator.
 
 **Features:**
 
 -   Works with any keyboard shortcut
 -   Silent VBScript + PowerShell execution
 -   Includes virtual key code reference
--   Example: PowerToys OCR (`Win + Shift + T`)
+-   Examples: PowerToys OCR (`Win + Shift + T`), Voice Typing (`Win + H`)
+-   Custom keybinding option — enter any key combination (e.g., `Win+I`, `Ctrl+Shift+Esc`)
 
 **Best for:** Users who prefer mouse clicks over keyboard shortcuts
 
@@ -253,6 +267,7 @@ A comprehensive guide and automation script to harden Windows privacy by disabli
 -   Turn off background services that report to Microsoft
 -   Clear tracking history from File Explorer and run dialogs
 -   Includes `privacy_hardening.ps1` for automated application
+-   Includes `firewall folder blocker.bat` to block all executables in a folder from network access via Windows Firewall
 
 **Best for:** Privacy-conscious users, power users, and system administrators
 
