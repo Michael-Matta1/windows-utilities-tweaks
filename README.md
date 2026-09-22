@@ -8,7 +8,7 @@ A comprehensive collection of Windows registry tweaks, scripts, and utilities to
 
 -   [Quick Start](#-quick-start)
 -   [Features Overview](#-features-overview)
--   [Apply These Tweaks Automatically (GUI)](#-apply-these-tweaks-automatically-gui)
+-   [Apply These Tweaks Automatically (GUI)](#-new-apply-these-tweaks-automatically-gui)
 -   [Available Tweaks](#-available-tweaks)
     -   [File Creation & Management](#file-creation--management)
     -   [Context Menu Customization](#context-menu-customization)
@@ -22,9 +22,9 @@ A comprehensive collection of Windows registry tweaks, scripts, and utilities to
 
 ---
 
-## 🚀 NEW: Apply These Tweaks Automatically (GUI)
+## 🆕 NEW: Apply These Tweaks Automatically (GUI)
 
-You can now apply and control these tweaks with a graphical interface — download **[Windows Tweaks Launcher](https://github.com/Michael-Matta1/windows-utilities-tweaks/releases/latest/download/WindowsTweakLauncher.exe)**, place the `.exe` in this repo's root folder (the same folder as this README), and run it. It detects the folder automatically, shows which tweaks are already applied, and can back up the affected registry keys before changing anything. It's fully self-contained. Click on a tweak from the list on the left to apply, revert it, customize it, or view its details and the launcher will handle the rest.
+You can now apply and control these tweaks with a graphical interface — download **[Windows Tweaks Launcher by clicking here](https://github.com/Michael-Matta1/windows-utilities-tweaks/releases/latest/download/WindowsTweakLauncher.exe)**, place the `.exe` in this repo's root folder (the same folder as this README), and run it. It detects the folder automatically, shows which tweaks are already applied, and can back up the affected registry keys before changing anything. It's fully self-contained. Click on a tweak from the list on the left to apply, revert it, customize it, or view its details and the launcher will handle the rest.
 
 > **Downloaded this repo as a ZIP?** Make sure `WindowsTweakLauncher.exe` ends up in the same folder as this README and the tweak folders — not nested inside a subfolder.
 
@@ -68,7 +68,7 @@ This repository provides solutions for:
 
 ### File Creation & Management
 
-#### [🆕 Create New Text File with Keyboard Shortcut](https://github.com/Michael-Matta1/windows-utilities-tweaks/tree/main/Add%20a%20Keyboard%20Shortcut%20to%20create%20New%20Text%20File)
+#### [🆕 Create New Text File with Keyboard Shortcut](Add%20a%20Keyboard%20Shortcut%20to%20create%20New%20Text%20File/)
 
 Create new text files instantly with `Ctrl + Alt + N` (or any shortcut you choose) in any File Explorer window.
 
@@ -83,7 +83,7 @@ Create new text files instantly with `Ctrl + Alt + N` (or any shortcut you choos
 
 ---
 
-#### [📝 Silent Markdown Creator](https://github.com/Michael-Matta1/windows-utilities-tweaks/tree/main/Add%20a%20Silent%20Markdown%20Creator%20to%20Context%20Menu)
+#### [📝 Silent Markdown Creator](Add%20a%20Silent%20Markdown%20Creator%20to%20Context%20Menu/)
 
 Add "Create Markdown File" to your right-click context menu.
 
@@ -98,7 +98,7 @@ Add "Create Markdown File" to your right-click context menu.
 
 ---
 
-#### [📋 Copy Path Without Quotes](https://github.com/Michael-Matta1/windows-utilities-tweaks/tree/main/Copy%20Path%20Without%20Quotes)
+#### [📋 Copy Path Without Quotes](Copy%20Path%20Without%20Quotes/)
 
 Adds a context menu option to copy file paths without quotes.
 
@@ -114,7 +114,7 @@ Adds a context menu option to copy file paths without quotes.
 
 ### Context Menu Customization
 
-#### [🐍 Run Python Files from Context Menu](https://github.com/Michael-Matta1/windows-utilities-tweaks/tree/main/add%20run_with_python%20option%20to%20.py)
+#### [🐍 Run Python Files from Context Menu](add%20run_with_python%20option%20to%20.py/)
 
 Execute Python scripts directly from File Explorer.
 
@@ -129,7 +129,7 @@ Execute Python scripts directly from File Explorer.
 
 ---
 
-#### [⚡ Run PowerShell Scripts as Admin](https://github.com/Michael-Matta1/windows-utilities-tweaks/tree/main/Add%20Context%20Menu%20option%20to%20run%20.ps1%20files%20as%20Admin)
+#### [⚡ Run PowerShell Scripts as Admin](Add%20Context%20Menu%20option%20to%20run%20.ps1%20files%20as%20Admin/)
 
 Add "Run with PowerShell (Admin)" to `.ps1` file context menu.
 
@@ -144,7 +144,7 @@ Add "Run with PowerShell (Admin)" to `.ps1` file context menu.
 
 ---
 
-#### [🗑️ Remove or Disable Context Menu Items](https://github.com/Michael-Matta1/windows-utilities-tweaks/tree/main/Remove%20or%20Disable%20Context%20Menu%20Items)
+#### [🗑️ Remove or Disable Context Menu Items](Remove%20or%20Disable%20Context%20Menu%20Items/)
 
 Comprehensive guide to customizing Windows 11 context menus.
 
@@ -161,7 +161,7 @@ Comprehensive guide to customizing Windows 11 context menus.
 
 ### Command Line Enhancements
 
-#### [💻 Admin CMD from Explorer Address Bar](https://github.com/Michael-Matta1/windows-utilities-tweaks/tree/main/Explorer%20Address%20Bar%20Admin%20CMD%20shortcut)
+#### [💻 Admin CMD from Explorer Address Bar](Explorer%20Address%20Bar%20Admin%20CMD%20shortcut/)
 
 Open elevated Command Prompt directly from File Explorer's address bar.
 
@@ -176,7 +176,7 @@ Open elevated Command Prompt directly from File Explorer's address bar.
 
 ---
 
-#### [🐚 Custom Profiles for Windows Terminal](https://github.com/Michael-Matta1/windows-utilities-tweaks/tree/main/Adding%20Custom%20Profiles%20to%20Terminal%20app)
+#### [🐚 Custom Profiles for Windows Terminal](Adding%20Custom%20Profiles%20to%20Terminal%20app/)
 
 Guide for adding custom profiles (Python IDLE, Git Bash, etc.) to Windows Terminal.
 
@@ -192,7 +192,7 @@ Guide for adding custom profiles (Python IDLE, Git Bash, etc.) to Windows Termin
 
 ### System Shortcuts & Navigation
 
-#### [📌 Pin Any Keyboard Shortcut to Taskbar](https://github.com/Michael-Matta1/windows-utilities-tweaks/tree/main/Pin%20Any%20Keyboard%20Shortcut%20to%20Taskbar%20-%20OCR%20%26%20Voice%20Typing)
+#### [📌 Pin Any Keyboard Shortcut to Taskbar](Pin%20Any%20Keyboard%20Shortcut%20to%20Taskbar%20-%20OCR%20%26%20Voice%20Typing/)
 
 Convert keyboard shortcuts into clickable taskbar icons. Includes examples for PowerToys OCR, Windows Voice Typing, and a custom keybinding generator.
 
@@ -208,7 +208,7 @@ Convert keyboard shortcuts into clickable taskbar icons. Includes examples for P
 
 ---
 
-#### [⌨️ Fix Right Alt + Shift Language Toggle](https://github.com/Michael-Matta1/windows-utilities-tweaks/tree/main/Fix%20Alt%2BShift%20LanguageToggle)
+#### [⌨️ Fix Right Alt + Shift Language Toggle](Fix%20Alt%2BShift%20LanguageToggle/)
 
 A solution for the Windows 11 bug where Right Alt + Shift only switches languages in one direction.
 
@@ -223,7 +223,7 @@ A solution for the Windows 11 bug where Right Alt + Shift only switches language
 
 ---
 
-#### [📁 Windows Special System Folders](https://github.com/Michael-Matta1/windows-utilities-tweaks/tree/main/Windows%20Special%20System%20Folders%20and%20Their%20Usages)
+#### [📁 Windows Special System Folders](Windows%20Special%20System%20Folders%20and%20Their%20Usages/)
 
 Quick access guide to special Windows folders using `shell:` commands.
 
@@ -240,7 +240,7 @@ Quick access guide to special Windows folders using `shell:` commands.
 
 ### Windows Explorer Customization
 
-#### [🏠 Set Custom File Explorer Start Location](https://github.com/Michael-Matta1/windows-utilities-tweaks/tree/main/Set%20File%20Explorer%20to%20Open%20to%20a%20Custom%20Location)
+#### [🏠 Set Custom File Explorer Start Location](Set%20File%20Explorer%20to%20Open%20to%20a%20Custom%20Location/)
 
 Make File Explorer open to your preferred folder by default.
 
@@ -257,7 +257,7 @@ Make File Explorer open to your preferred folder by default.
 
 ### Privacy & Security
 
-#### [🛡️ Windows Privacy & Telemetry Hardening Guide](https://github.com/Michael-Matta1/windows-utilities-tweaks/tree/main/Privacy%20%26%20Telemetry%20Guide)
+#### [🛡️ Windows Privacy & Telemetry Hardening Guide](Privacy%20%26%20Telemetry%20Guide/)
 
 A comprehensive guide and automation script to harden Windows privacy by disabling telemetry, data collection, and unnecessary tracking.
 
@@ -275,7 +275,7 @@ A comprehensive guide and automation script to harden Windows privacy by disabli
 
 ### Testing & System Configuration
 
-#### [🧪 Testing Brand-Exclusive Software - Hardware Identity Modification](https://github.com/Michael-Matta1/windows-utilities-tweaks/tree/main/Testing%20Brand-Exclusive%20Software%20-%20Hardware%20Identity%20Modification)
+#### [🧪 Testing Brand-Exclusive Software - Hardware Identity Modification](Testing%20Brand-Exclusive%20Software%20-%20Hardware%20Identity%20Modification/)
 
 Temporarily modify Windows registry values to test brand-exclusive software before purchasing hardware.
 
